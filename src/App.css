@@ -1,24 +1,41 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|Slabo+27px');
 
 .fade-enter {
-  opacity: 0.01;
-  position: absolute;
+    opacity: 0.01;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    transition: opacity 300ms ease-out;
 }
 
 .fade-exit{
-  position: absolute;
+    top: 0px;
+    opacity: 0.01;
+    position: absolute;
+    width: 100%;
+    transition: opacity 300ms ease-out;
 }
 
+.fade-exit-active{
+    opacity: 0.01;
+    transition: opacity 300ms ease-out;
+}
 .fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
+    opacity: 1;
+    transition: opacity 300ms ease-in;
 }
 
 .fade-leave {
-  opacity: 1;
+    opacity: 1;
+    transition: opacity 300ms ease-in;
 }
 
 .fade-leave.fade-leave-active {
-  opacity: 0.01;
-  transition: opacity 700ms ease-in;
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+}
+
+.content-section{
+    height: 96vh;
+    position: relative;
 }

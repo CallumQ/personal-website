@@ -1,10 +1,9 @@
 nav{
     padding: 0;
     margin: 0;
-    background: #f7f7f4;
+    background: #09487e;
     position: relative;
-    height: 50px;
-    border-bottom: 2px solid #4b88a2;
+    height: 4vh;
 }
 
 nav ul {
@@ -13,22 +12,32 @@ nav ul {
 }
 
 body{
+    overflow-y:hidden;
     margin: 0;
     padding: 0;
 }
 
 .nav-links{
- position: absolute;
- display: flex;
-
-  top: 70%;
-  transform: translateY(-50%);
-
+    position: absolute;
+    display: flex;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .nav-links a {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
     text-decoration: none;
-    padding-left: 20px;
-     color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #f7f7f4;
 }
+
+.websiteLogo{
+    position: absolute;
+    right: 10px;
+    width: 70px;
+    top: 4px;
+    opacity: 1;
+}
+

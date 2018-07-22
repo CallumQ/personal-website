@@ -1,0 +1,132 @@
+.blog-post-container{
+    position: relative;
+    height: 350px;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 10px 6px -6px rgb(185, 185, 185);
+}
+
+.blog-post-image{
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    filter: grayscale(80%);
+    margin:auto;
+    display:block;
+    transition: 1s ease all;
+}
+
+.blog-post-image:hover{
+    filter: grayscale(0%) saturate(2);
+    transition: 0.2s ease all;
+}
+
+.blog-post-bottom-bar{
+    position: absolute;
+    top: 300px;
+    height: 100%;
+    width: 100%;
+    background: rgba(255,255,255,0.9);
+    transition: 0.6s ease all;
+}
+
+.blogpost-divider{
+    position: absolute;
+    top: 0px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    width: 100%;
+    height: 51px;
+}
+
+.active-post{
+    top: 0px;
+    background: rgba(255,255,255,1);
+    transition: 0.6s ease all;
+}
+
+.active-post > .blog-post-bottom-arrow{
+    transform: rotate(180deg);
+}
+
+.blog-post-bottom-text{
+    position: absolute;
+    padding-left: 20px;
+    height: 50px;
+    left: 0px;
+}
+
+.blog-post-bottom-text p{
+    font-size: 26px;
+    font-family: 'PT Sans', sans-serif;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    transition: 0.3s ease all;
+}
+
+.blog-post-bottom-text p:hover{
+    transition: 0.3s ease all;
+    color: #444;
+}
+
+.blog-post-bottom-arrow{
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+    right: 20px;
+    top: 0px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s ease all;
+}
+
+.blog-post-bottom-details{
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 299px;
+    position: relative;
+    top: 51px;
+    background: transparent;
+    width: 100%;
+    text-align: left;
+}
+
+.blog-post-bottom-details i {
+    font-size: 18px;
+    padding-top: 12px;
+}
+
+.blog-post-bottom-content{
+    padding-top: 12px;
+    font-size: 18px;
+}
+
+.bottom-button-container{
+    position: absolute;
+    bottom: 22px;
+    left: 0px;
+    width: 100%;
+}
+
+.bottom-button-container-content{
+   position: relative;
+    text-align: center;
+}
+
+.bottom-button-container-content a{
+    padding: 5px 15px 5px 15px;
+    border: 1px solid black;
+    color: black;
+    transition: 0.3s ease all;
+}
+
+.bottom-button-container-content a:hover{
+    background: #09487e;
+    border: 1px solid #077187;
+    color: white;
+}
