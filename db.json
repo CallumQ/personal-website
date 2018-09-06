@@ -1,0 +1,28 @@
+{
+  "posts": [
+    { "id": 1, "title": "project1", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
+    { "id": 2, "title": "project2", "description": "this is some example text", "technology":["REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
+    { "id": 3, "title": "project3", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
+    { "id": 4, "title": "project4", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
+    { "id": 5, "title": "project5", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
+    { "id": 6, "title": "project6", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
+    { "id": 7, "title": "project7", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
+    { "id": 8, "title": "project8", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
+    { "id": 9, "title": "project9", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
+    { "id": 10, "title": "project10", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
+    { "id": 11, "title": "project11", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
+    { "id": 12, "title": "project12", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
+    { "id": 13, "title": "project13", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
+    { "id": 14, "title": "project14", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
+    { "id": 15, "title": "project15", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
+    { "id": 16, "title": "project16", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
+    { "id": 17, "title": "project17", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
+    { "id": 18, "title": "project18", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
+    { "id": 19, "title": "project19", "description": "this is some example text", "technology":["CSS","C#"],"imageUrl":"https://via.placeholder.com/398x300"},
+    { "id": 20, "title": "project20", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"}
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}

@@ -2,24 +2,23 @@
 
 .fade-enter {
     opacity: 0.01;
-    position: absolute;
-    top: 0px;
     width: 100%;
+    position: absolute;
     transition: opacity 300ms ease-out;
 }
 
-.fade-exit{
-    top: 0px;
+.fade-exit {
+    width: 100%;
     opacity: 0.01;
     position: absolute;
-    width: 100%;
     transition: opacity 300ms ease-out;
 }
 
-.fade-exit-active{
+.fade-exit-active {
     opacity: 0.01;
     transition: opacity 300ms ease-out;
 }
+
 .fade-enter.fade-enter-active {
     opacity: 1;
     transition: opacity 300ms ease-in;
@@ -35,7 +34,10 @@
     transition: opacity 300ms ease-in;
 }
 
-.content-section{
-    height: 96vh;
-    position: relative;
+.content-section {
+    height: 92.8vh;
 }
+
+ #body {
+    overflow:hidden;
+ }

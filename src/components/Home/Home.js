@@ -4,61 +4,88 @@ import { Grid, Image, Divider, Button, Icon} from 'semantic-ui-react'
 import {NavLink } from "react-router-dom";
 import circle from "../../circle.jpg";
 import personalPhoto from "../../personalPhoto.png";
+import placeholder from "../../placeholder.png";
 import HomepageBlogPost from "../HomepageBlogPost/HomepageBlogPost";
 
 class Home extends Component {
     render() {
         return (
             <div className="content">
-                <div class="hero-box">
-                    <div className="hero-box-picture">
-                        <img src={personalPhoto} alt="Website Logo" className="hero-picture image-shadow"/>
-                    </div>
-                    <div class="hero-box-description">
-                        <p className="hero-box-description-heading">
-                            <strong>Hi there, I'm Callum and I'm a Software Engineer.</strong>
-                        </p>
-                        <p className="description">
-                            I graduated from Heriot-Watt University in 2017 with 1<sup>st</sup> class honours in Computer Systems. I'm currently based in Manchester.
-                        </p>
-                        <p className="description">
-                            I mainly use Java or C# combined with React for developing web-based applications, but I also have experience with Python, C, SQL, and MongoDB as well as lots of other languages and technologies. Check out my project pace for some examples.
-                        </p>
-                    </div>
-                    <div className="hero-box-divider">
-                        <Divider/>
-                    </div> 
-                    <Button.Group widths="1">
-                        <Button>
-                            <NavLink exact to="/projects" activeClassName="active">Projects</NavLink>
-                        </Button>
-                        <Button>
-                            <NavLink exact to="/cv" activeClassName="active">CV</NavLink>
-                        </Button>
-                        <Button>
-                            <NavLink exact to="/contact" activeClassName="active">Contact</NavLink>
-                        </Button> 
-                    </Button.Group>
-                </div> 
-                <div className="recent-posts">
-                    <strong>
-                        <p className="recent-posts-text">Recent Posts</p>
-                    </strong>
-                    <Divider/>
-                    <Grid>
-                        <Grid.Row columns={3}>
-                            <Grid.Column>
-                                <HomepageBlogPost/>
-                            </Grid.Column>
-                            <Grid.Column>
-                                <HomepageBlogPost/>
-                            </Grid.Column>
-                            <Grid.Column>
-                                <HomepageBlogPost/>
-                            </Grid.Column>
-                        </Grid.Row>
-                    </Grid>
+            <div className="intro-section">
+            <div className="section-header">
+            Hi There, My name's Callum and I'm a Software Engineer</div>
+            <div className="section-content">I develop web applications &amp; native applications mainly using C# and Java.<br/> I also have experience with other languages such as C, Python, and web development frameworks like React and Backbone. <br/><br/> You can have a look at some of my <a href="#">projects</a> to see some examples of my work and the technologies that I have used.</div>
+            <div className="section-content">
+
+            <a href="#"><div className="button">Portfolio</div></a>
+            <a href="#"><div className="button">CV</div></a>
+            <a href="#"><div className="button">Contact</div></a>
+            </div>
+            </div>
+
+            <div className="inverted-section">
+            <p className="blogpost-header">Recent posts</p>
+            <div className="blogpost-section">
+
+
+
+
+            <div className="blogpost-item">
+                <a href="#">
+                    <div className="blogpost-title">This is an example title just to make sure it works </div>
+                </a>
+                <div className="blogpost-image">
+                    <img src={placeholder}/>
                 </div>
+                <div className="blogpost-bottomBar">
+                    <div className="blogpost-creationDate"><Icon name='calendar'/> 01/02/1995</div>
+                    <div className="blogpost-navigate">
+                        <a href="#">
+                            View <Icon name='external'/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div className="blogpost-item">
+                <a href="#">
+                    <div className="blogpost-title">This is an example title just to make sure it works </div>
+                </a>
+                <div className="blogpost-image">
+                    <img src={placeholder}/>
+                </div>
+                <div className="blogpost-bottomBar">
+                    <div className="blogpost-creationDate"><Icon name='calendar'/> 01/02/1995</div>
+                    <div className="blogpost-navigate">
+                        <a href="#">
+                            View <Icon name='external'/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+           <div className="blogpost-item">
+                <a href="#">
+                    <div className="blogpost-title">This is an example title just to make sure it works </div>
+                </a>
+                <div className="blogpost-image">
+                    <img src={placeholder}/>
+                </div>
+                <div className="blogpost-bottomBar">
+                    <div className="blogpost-creationDate"><Icon name='calendar'/> 01/02/1995</div>
+                    <div className="blogpost-navigate">
+                        <a href="#">
+                            View <Icon name='external'/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            
+            </div>
+
+
             </div>
         )
     }

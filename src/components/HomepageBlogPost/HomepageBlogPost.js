@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "../HomepageBlogPost/HomepageBlogPost.css";
-import { Grid, Image, Divider, Button, Icon} from 'semantic-ui-react'
+import {Icon} from 'semantic-ui-react'
 import placeholder from "../../800x450.jpg";
 
 class HomepageBlogPost extends Component {
@@ -23,7 +23,7 @@ class HomepageBlogPost extends Component {
                 <a href="#">
                     <img src={placeholder} className="blog-post-image"/>
                 </a>
-                <div className={+ this.state.isActive ? "blog-post-bottom-bar active-post" : "blog-post-bottom-bar"}>
+                <div className={this.state.isActive ? "blog-post-bottom-bar active-post" : "blog-post-bottom-bar"}>
                     <div className="blogpost-divider"></div>
                     <div className="blog-post-bottom-text">
                         <a href="#">
