@@ -18,7 +18,7 @@
     { "id": 16, "title": "project16", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
     { "id": 17, "title": "project17", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
     { "id": 18, "title": "project18", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"},
-    { "id": 19, "title": "project19", "description": "this is some example text", "technology":["CSS","C#"],"imageUrl":"https://via.placeholder.com/398x300"},
+    { "id": 19, "title": "project19", "description": "this is some example text", "technology":["CSS","CSHARP"],"imageUrl":"https://via.placeholder.com/398x300"},
     { "id": 20, "title": "project20", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300"}
   ],
   "comments": [

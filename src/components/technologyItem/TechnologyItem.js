@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SVGInline from 'react-svg-inline';
 import PropTypes from 'prop-types';
 import '../technologyItem/technologyItem.css';
-import {Tooltip} from 'react-tippy';
+import ReactTooltip from 'react-tooltip'
 
 //The string representation of a given technology. This acts similar to how ENUM's work in other languages.
 const techNames = {
@@ -88,7 +88,8 @@ class TechnologyItem extends Component {
     super(props);  
     this.state = {
     itemSVG : this.convertStringToSVG(this.props.item),
-    technologyName : this.convertStringtoReadableString(this.props.stringName)
+    technologyName : this.convertStringtoReadableString(this.props.stringName),
+    randomNumber : this.randomnumber()
   }}
 
   //takes the passed in string value and attempts to find a matching human readable string
@@ -113,15 +114,15 @@ class TechnologyItem extends Component {
 
   //hacky way to generate a random number
   randomnumber() {
-    return Math.random() * (100000000 - 1) + 1;
+    return Math.random() * (100000000 - 1) + 1 + "ID";
   }
 
   render() {
     return (     
       <div className="tech-icon-container">
-        <Tooltip title={this.state.technologyName} position="bottom" distance="5">
-          <SVGInline className="tech-icon" svg={this.state.itemSVG} key={this.randomnumber()}/>
-        </Tooltip>
+        <SVGInline data-tip data-for={this.state.randomNumber} className="tech-icon" svg={this.state.itemSVG} key={this.state.randomNumber}/>
+          <ReactTooltip id={this.state.randomNumber} place='bottom' effect='solid'> <span>{this.state.technologyName}</span>
+        </ReactTooltip>
       </div>
     );
   }
