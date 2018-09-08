@@ -1,19 +1,11 @@
-import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect,
-  NavLink
-} from "react-router-dom";
 import './App.css';
-import Navbar from "../src/components/Navbar/Navbar";
+import React, { Component } from 'react';
 import Home from "../src/components/Home/Home";
+import Navbar from "../src/components/Navbar/Navbar";
 import Footer from "../src/components/Footer/Footer";
 import Portfolio from "../src/components/Portfolio/Portfolio";
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
 export default class App extends Component {
   render() {
@@ -22,12 +14,8 @@ export default class App extends Component {
         <Router>
           <Route
             render={({ location }) => (
-            <React.Fragment>
-                <Route
-                  exact
-                  path="/"
-                  render={() => <Redirect to="/home" />}
-                  />
+              <React.Fragment>
+                <Route exact path="/" render={() => <Redirect to="/home" />}/>
                   <Navbar/>
                   <div className="content-section">
                     <TransitionGroup>
@@ -43,8 +31,8 @@ export default class App extends Component {
                       </CSSTransition>
                     </TransitionGroup>
                   </div>
-                   <Footer/>
-                </React.Fragment>
+                <Footer/>
+              </React.Fragment>
             )}
           />
         </Router>
@@ -52,9 +40,6 @@ export default class App extends Component {
     )
   }
 }
-
-
-
 
 const CV = () => {return(<div>CV</div>)}
 const Contact = () => {return(<div>Contact</div>)}

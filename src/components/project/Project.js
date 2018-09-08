@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import placeholder from "../../placeholder.png";
-import PropTypes from 'prop-types';
-import { Grid, Image, Divider, Button, Icon, Form, Pagination, Segment} from 'semantic-ui-react';
+import { Grid, Icon } from 'semantic-ui-react';
 import TechnologyItem from "../technologyItem/TechnologyItem";
 
 class Project extends Component {  
@@ -10,7 +9,7 @@ class Project extends Component {
     return (
         <Grid.Column>
             <div className="blogpost-item">
-                <a href="#">
+                <a onClick={() => this.props.openModal(10)}>
                     <div className="blogpost-title">{this.props.properties.title}</div>
                 </a>
                 <div className="blogpost-image">
@@ -19,7 +18,7 @@ class Project extends Component {
                 <div className="blogpost-bottomBar">
                     <div className="blogpost-creationDate"> {this.props.properties.technology.map(tech => <TechnologyItem key={tech}item={tech} stringName={tech}/>)}</div>
                     <div className="blogpost-navigate">
-                        <a href="#">
+                        <a onClick={() => this.props.openModal(this.props.properties.id)}>
                             View <Icon name='external'/>
                         </a>
                     </div>

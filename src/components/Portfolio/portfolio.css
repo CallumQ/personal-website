@@ -62,3 +62,29 @@
     background: rgba(0,0,0,0.1);
     border: 1px solid rgba(0,0,0,0.1);
 }
+
+.blogpost-item a {
+
+    cursor: pointer;
+}
+
+.actions{
+    position: relative;
+}
+
+.actions .tech-section{
+position: absolute;
+display: flex;
+top: 50%;
+transform: translateY(-50%);
+}
+.actions .tech-section p {
+    padding-right:5px;
+    font-size: 1.2em;
+
+transform: translateY(50%);
+}
+
+.actions .tech-section .tech-icon-container{
+    transform: translateY(25%);
+}

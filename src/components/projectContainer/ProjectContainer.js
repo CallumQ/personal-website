@@ -12,13 +12,12 @@ componentDidUpdate(){
 }
   buildProjects(){
     let projects = this.props.projects;
-    console.log("hello world");
   }
 
   render() {
     return (
       <React.Fragment>
-        {this.props.projects.map(project => <Project key={project.id} properties={project}/>)}
+        {this.props.projects.map(project => <Project key={project.id} properties={project} openModal={this.props.openModal}/>)}
      </React.Fragment>
     );
   }  
