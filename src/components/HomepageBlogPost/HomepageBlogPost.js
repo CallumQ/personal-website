@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
 import "../HomepageBlogPost/HomepageBlogPost.css";
-import {Icon} from 'semantic-ui-react'
 import placeholder from "../../800x450.jpg";
+import React, { Component } from 'react';
+import {Icon} from 'semantic-ui-react'
 
 class HomepageBlogPost extends Component {
 

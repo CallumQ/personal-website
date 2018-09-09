@@ -1,7 +1,7 @@
 .intro-section, 
 .inverted-section {
-    padding: 96px 10%;
     text-align: center;
+    padding: 96px 10%;
 }
 
 .inverted-section {
@@ -9,9 +9,9 @@
 }
 
 .section-content {
-    font-size: 1.3em;
-    padding: 48px 35% 0px 35%;
     font-family: 'Source Sans Pro', sans-serif;
+    padding: 48px 35% 0px 35%;
+    font-size: 1.3em;
 }
 
 .section-header {
@@ -19,14 +19,14 @@
 }
 
 .button {
-    width: 20%;
-    margin: 5px;
-    padding: 10px;
-    background: black;
-    display: inline-block;
-    transition: color 0.6s;
-    color: rgb(197, 197, 197);
     font-family: 'Raleway', sans-serif;
+    color: rgb(197, 197, 197);
+    transition: color 0.6s;
+    display: inline-block;
+    background: black;
+    padding: 10px;
+    margin: 5px;
+    width: 20%;
 }
 
 .button:hover {
@@ -34,36 +34,36 @@
 }
 
 .blogpost-header {
-    font-size: 2em;
     font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2em;
 }
 
 .blogpost-item {
-    width: 400px;
-    margin: 48px;
-    height: 400px;
-    position: relative;
-    display: inline-block;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    background: rgba(0,0,0,0.1);
-    border: 1px solid rgba(0,0,0,0.1);
-    text-align: center;
     font-family: 'Source Sans Pro', sans-serif;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background: rgba(0,0,0,0.1);
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    height: 400px;
+    margin: 48px;
+    width: 400px;
 }
 
 .blogpost-title {
-    width: 100%;
-    height: 50px;
-    font-size: 1.1em;
-    padding-top: 15px;
-    border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-    background: black;
-    transition: color 0.2s;
+    border-top-left-radius: 4px;
     color: rgb(197, 197, 197);
+    transition: color 0.2s;
+    background: black;
+    padding-top: 15px;
+    font-size: 1.1em;
+    height: 50px;
+    width: 100%;
 }
 
 .blogpost-image {
@@ -81,25 +81,25 @@
 }
 
 .blogpost-creationDate {
-    top: 50%;
-    left: 15px;
-    cursor: default;
-    margin-top: -10px;
-    position: absolute;
-    transition: color 0.2s;
     color: rgb(197, 197, 197);
+    transition: color 0.2s;
+    position: absolute;
+    margin-top: -10px;
+    cursor: default;
+    left: 15px;
+    top: 50%;
 }
 
 .blogpost-navigate {
-    top: 15px;
-    right: 15px;
-    position: absolute;
     font-size: 16px !important;
+    position: absolute;
+    right: 15px;
+    top: 15px;
 }
 
 .blogpost-navigate a {
-    transition: color 0.2s;
     color: rgb(197, 197, 197);
+    transition: color 0.2s;
 }
 
 .blogpost-item:hover .blogpost-title,

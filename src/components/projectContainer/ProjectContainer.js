@@ -3,24 +3,25 @@ import PropTypes from 'prop-types';
 import Project from '../project/Project';
 
 class ProjectContainer extends Component {
-  constructor(props){
-    super(props);
-  }
+    constructor(props) {
+        super(props);
+    }
 
-componentDidUpdate(){
-  this.buildProjects();
-}
-  buildProjects(){
-    let projects = this.props.projects;
-  }
+    componentDidUpdate() {
+        this.buildProjects();
+    }
 
-  render() {
-    return (
-      <React.Fragment>
-        {this.props.projects.map(project => <Project key={project.id} properties={project} openModal={this.props.openModal}/>)}
-     </React.Fragment>
-    );
-  }  
+    buildProjects() {
+        let projects = this.props.projects;
+    }
+
+    render() {
+        return (
+          <React.Fragment>
+            {this.props.projects.map(project => <Project key={project.id} properties={project} openModal={this.props.openModal}/>)}
+          </React.Fragment>
+        );
+    }
 }
 
 export default ProjectContainer;

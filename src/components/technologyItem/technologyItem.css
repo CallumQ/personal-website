@@ -1,22 +1,22 @@
-.tech-icon-container, .language-text{
+.tech-icon-container, .language-text {
     display: inline;
 }
 
-.language-text{
+.language-text {
     margin-right:5px;
     color: #868686;
 }
 
 .tech-icon svg {
-    margin-right:5px;
-    height: 25px;
     filter: grayscale(100%);
-    opacity: 0.5;
     transition: 0.5s ease all;
+    margin-right:5px;
+    opacity: 0.5;
+    height: 25px;
 }
 
 .tech-icon svg:hover {
+    transition: 0.5s ease all;
     filter: grayscale(0%);
     opacity: 1;
-    transition: 0.5s ease all;
 }

@@ -1,6 +1,6 @@
-import React from 'react';
 import {Icon} from 'semantic-ui-react';
 import "../Footer/Footer.css";
+import React from 'react';
 
 const Footer = () => (
     <footer className="footer">

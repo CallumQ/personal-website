@@ -1,11 +1,7 @@
-import React, { Component } from 'react';
-import "../Home/Home.css";
-import { Grid, Image, Divider, Button, Icon} from 'semantic-ui-react'
-import {NavLink } from "react-router-dom";
-import circle from "../../circle.jpg";
-import personalPhoto from "../../personalPhoto.png";
 import placeholder from "../../placeholder.png";
-import HomepageBlogPost from "../HomepageBlogPost/HomepageBlogPost";
+import React, { Component } from 'react';
+import { Icon } from 'semantic-ui-react';
+import "../Home/Home.css";
 
 class Home extends Component {
     render() {
