@@ -8,7 +8,7 @@ class Project extends Component {
         return (
             <Grid.Column>
                 <div className="blogpost-item">
-                    <a onClick={() => this.props.openModal(10)}>
+                    <a onClick={() => this.props.openModal(this.props.properties.id)}>
                         <div className="blogpost-title">{this.props.properties.title}</div>
                     </a>
                     <div className="blogpost-image">

@@ -8,7 +8,7 @@ export default class Navbar extends Component {
     render() {
         return ( 
             <div className="nav-bar">
-                <SVGInline svg={HeaderLogo} className="websiteLogo"/>
+                <NavLink exact to="/home"><SVGInline svg={HeaderLogo} className="websiteLogo"/></NavLink>
                 <div className="menu-centered">
                     <ul className="menu">
                         <li><NavLink exact to="/home" activeClassName="active-item"><Icon name='home'/></NavLink></li>

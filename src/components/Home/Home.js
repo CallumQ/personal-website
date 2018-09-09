@@ -1,6 +1,7 @@
 import placeholder from "../../placeholder.png";
 import React, { Component } from 'react';
 import { Icon } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 import "../Home/Home.css";
 
 class Home extends Component {
@@ -10,12 +11,12 @@ class Home extends Component {
             <div className="intro-section">
             <div className="section-header">
             Hi There, My name's Callum and I'm a Software Engineer</div>
-            <div className="section-content">I develop web applications &amp; native applications mainly using C# and Java.<br/> I also have experience with other languages such as C, Python, and web development frameworks like React and Backbone. <br/><br/> You can have a look at some of my <a href="#">projects</a> to see some examples of my work and the technologies that I have used.</div>
+            <div className="section-content">I develop web applications &amp; native applications mainly using C# and Java.<br/> I also have experience with other languages such as C, Python, and web development frameworks like React and Backbone. <br/><br/> You can have a look at some of my  <Link to="portfolio">projects</Link> to see some examples of my work and the technologies that I have used.</div>
             <div className="section-content">
 
-            <a href="#"><div className="button">Portfolio</div></a>
-            <a href="#"><div className="button">CV</div></a>
-            <a href="#"><div className="button">Contact</div></a>
+            <Link to="portfolio"> <div className="button">Portfolio</div></Link>
+            <Link to="cv"><div className="button">CV</div></Link>
+            <Link to="contact"><div className="button">Contact</div></Link>
             </div>
             </div>
 

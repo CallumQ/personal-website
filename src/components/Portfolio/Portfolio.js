@@ -1,4 +1,5 @@
-import { Grid, Image, Divider, Button, Icon, Form, Modal} from 'semantic-ui-react';
+import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import { Grid, Image, Divider, Button, Icon, Form, Modal, Header} from 'semantic-ui-react';
 import ProjectContainer from '../projectContainer/ProjectContainer';
 import TechnologyItem from "../technologyItem/TechnologyItem";
 import PaginationComponent from '../pagination/Pagination';
@@ -95,23 +96,28 @@ class Portfolio extends Component {
                 open={this.state.open}
                 closeOnEscape={this.closeOnEscape}
                 closeOnDimmerClick={this.closeOnDimmerClick}
-                onClose={this.close}>
+                onClose={this.close}
+                closeIcon>
                     <Modal.Header>{this.state.openedProject ? this.state.openedProject.title : ""}</Modal.Header>
-                    <Modal.Content>
-                        <p>Are you sure you want to delete your account</p>
-                    </Modal.Content>
+                    <Modal.Content image>
+      <Image wrapped size='medium' src={this.state.openedProject ? this.state.openedProject.imageUrl : ""} />
+      <Modal.Description>
+        <Header>{this.state.openedProject ? this.state.openedProject.title : ""}</Header>
+        {this.state.openedProject ? this.state.openedProject.description : ""}
+
+      </Modal.Description>
+    </Modal.Content>
                     <Modal.Actions>
                         <div className="tech-section">
                             <p>Technologies: </p>
                             {this.state.openedProject ? this.state.openedProject.technology.map(tech => <TechnologyItem key={tech}item={tech} stringName={tech}/>): ""}
                         </div>
-                        <Button onClick={this.close}> No </Button>
-                        <Button
-                        onClick={this.close}
+                        <a href={this.state.openedProject? this.state.openedProject.gitHubLink: ""} target="_blank"><Button
                         labelPosition='right'
                         icon='github'
                         content='Visit GitHub' secondary
-                        />
+                        
+                        /></a>
                     </Modal.Actions>
                 </Modal>
                 <div className="project-informationBar">

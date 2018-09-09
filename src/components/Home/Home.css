@@ -2,6 +2,7 @@
 .inverted-section {
     text-align: center;
     padding: 96px 10%;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .inverted-section {
@@ -24,6 +25,7 @@
     transition: color 0.6s;
     display: inline-block;
     background: black;
+    border-radius: 4px;
     padding: 10px;
     margin: 5px;
     width: 20%;

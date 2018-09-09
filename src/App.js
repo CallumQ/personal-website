@@ -1,6 +1,7 @@
 import './App.css';
 import React, { Component } from 'react';
 import Home from "../src/components/Home/Home";
+import About from "../src/components/About/About";
 import Navbar from "../src/components/Navbar/Navbar";
 import Footer from "../src/components/Footer/Footer";
 import Portfolio from "../src/components/Portfolio/Portfolio";
@@ -22,6 +23,7 @@ export default class App extends Component {
                       <CSSTransition key={location.key} classNames="fade" timeout={599}>
                         <Switch location={location}>
                           <Route exact path="/home" component={Home}/>
+                          <Route exact path="/about" component={About}/>
                           <Route exact path="/portfolio" component={Portfolio}/>
                           <Route exact path="/cv" component={CV}/>
                           <Route exact path="/contact" component={Contact}/>

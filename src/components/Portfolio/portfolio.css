@@ -19,6 +19,7 @@
     color: rgb(197, 197, 197);
     transition: 0.2s color;
     background: black;
+    border-radius: 4px;
     margin-left: 20px;
     display: initial;
     cursor: pointer;
