@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Project from '../project/Project';
 
 class ProjectContainer extends Component {
+    
     constructor(props) {
         super(props);
     }

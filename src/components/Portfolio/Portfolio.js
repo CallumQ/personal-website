@@ -1,5 +1,4 @@
-import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
-import { Grid, Image, Divider, Button, Icon, Form, Modal, Header} from 'semantic-ui-react';
+import { Grid, Image, Button, Icon, Modal, Header} from 'semantic-ui-react';
 import ProjectContainer from '../projectContainer/ProjectContainer';
 import TechnologyItem from "../technologyItem/TechnologyItem";
 import PaginationComponent from '../pagination/Pagination';

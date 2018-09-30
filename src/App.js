@@ -4,6 +4,7 @@ import Home from "../src/components/Home/Home";
 import About from "../src/components/About/About";
 import Navbar from "../src/components/Navbar/Navbar";
 import Footer from "../src/components/Footer/Footer";
+import Contact from "../src/components/Contact/Contact";
 import Portfolio from "../src/components/Portfolio/Portfolio";
 import CV from "../src/components/cv/CV";
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
@@ -44,5 +45,4 @@ export default class App extends Component {
   }
 }
 
-const Contact = () => {return(<div>Contact</div>)}
 const Blog = () => {return(<div>Blog</div>)}

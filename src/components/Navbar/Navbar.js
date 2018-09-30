@@ -15,7 +15,7 @@ export default class Navbar extends Component {
                         <li><NavLink exact to="/about" activeClassName="active-item">About</NavLink></li>
                         <li><NavLink exact to="/portfolio" activeClassName="active-item">Portfolio</NavLink></li>
                         <li><NavLink exact to="/cv" activeClassName="active-item">CV</NavLink></li>
-                        <li><NavLink exact to="/blog" activeClassName="active-item">Blog</NavLink></li>
+                        <li><NavLink exact to="/blog" activeClassName="active-item">Blog </NavLink></li>
                         <li><NavLink exact to="/contact" activeClassName="active-item">Contact</NavLink></li>
                     </ul>
                 </div>
