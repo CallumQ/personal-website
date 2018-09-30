@@ -5,6 +5,7 @@ import About from "../src/components/About/About";
 import Navbar from "../src/components/Navbar/Navbar";
 import Footer from "../src/components/Footer/Footer";
 import Portfolio from "../src/components/Portfolio/Portfolio";
+import CV from "../src/components/cv/CV";
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
@@ -43,6 +44,5 @@ export default class App extends Component {
   }
 }
 
-const CV = () => {return(<div>CV</div>)}
 const Contact = () => {return(<div>Contact</div>)}
 const Blog = () => {return(<div>Blog</div>)}

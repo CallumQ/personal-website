@@ -17,9 +17,9 @@ class ProjectContainer extends Component {
 
     render() {
         return (
-          <React.Fragment>
-            {this.props.projects.map(project => <Project key={project.id} properties={project} openModal={this.props.openModal}/>)}
-          </React.Fragment>
+            <React.Fragment>
+                {this.props.projects.map(project => <Project key={project.id} properties={project} openModal={this.props.openModal}/>)}
+            </React.Fragment>
         );
     }
 }

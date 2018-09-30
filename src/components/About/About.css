@@ -2,7 +2,8 @@ p {
 font-family: 'Source Sans Pro', sans-serif;
 font-size: 1.3em;
 }
-.about{
+
+.about {
     background: #edeeef;
-        border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }

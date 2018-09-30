@@ -96,10 +96,10 @@ class TechnologyItem extends Component {
     //takes the passed in string value and attempts to find a matching human readable string
     convertStringtoReadableString(stringName) {
         if (stringName.toUpperCase() in techNames){
-          return techNames[stringName.toUpperCase()];
+            return techNames[stringName.toUpperCase()];
         }
         else{
-          return techNames.DEFAULT;
+            return techNames.DEFAULT;
         }
       }
 
@@ -132,8 +132,8 @@ class TechnologyItem extends Component {
 
 //this.props validation (only used for during dev)
 TechnologyItem.propTypes = {
-  item: PropTypes.string,
-  stringName : PropTypes.string
+    item: PropTypes.string,
+    stringName : PropTypes.string
 }
 
 export default TechnologyItem;

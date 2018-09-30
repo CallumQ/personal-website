@@ -83,7 +83,7 @@ class Portfolio extends Component {
         this.setState({open: true});
     }
 
-    updateSearchfields(event,data){
+    updateSearchfields(event,data) {
         this.setState({searchByFields:data.value})
     }
 
@@ -100,24 +100,20 @@ class Portfolio extends Component {
                 closeIcon>
                     <Modal.Header>{this.state.openedProject ? this.state.openedProject.title : ""}</Modal.Header>
                     <Modal.Content image>
-      <Image wrapped size='medium' src={this.state.openedProject ? this.state.openedProject.imageUrl : ""} />
-      <Modal.Description>
-        <Header>{this.state.openedProject ? this.state.openedProject.title : ""}</Header>
-        {this.state.openedProject ? this.state.openedProject.description : ""}
-
-      </Modal.Description>
-    </Modal.Content>
+                        <Image wrapped size='medium' src={this.state.openedProject ? this.state.openedProject.imageUrl : ""} />
+                        <Modal.Description>
+                            <Header>{this.state.openedProject ? this.state.openedProject.title : ""}</Header>
+                            {this.state.openedProject ? this.state.openedProject.description : ""}
+                        </Modal.Description>
+                    </Modal.Content>
                     <Modal.Actions>
                         <div className="tech-section">
                             <p>Technologies: </p>
                             {this.state.openedProject ? this.state.openedProject.technology.map(tech => <TechnologyItem key={tech}item={tech} stringName={tech}/>): ""}
                         </div>
-                        <a href={this.state.openedProject? this.state.openedProject.gitHubLink: ""} target="_blank"><Button
-                        labelPosition='right'
-                        icon='github'
-                        content='Visit GitHub' secondary
-                        
-                        /></a>
+                        <a href={this.state.openedProject? this.state.openedProject.gitHubLink: ""} target="_blank">
+                            <Button labelPosition='right' icon='github' content='Visit GitHub' secondary/>
+                        </a>
                     </Modal.Actions>
                 </Modal>
                 <div className="project-informationBar">
@@ -131,7 +127,8 @@ class Portfolio extends Component {
                                 this.state.filteredProjects.length : 
                                 this.state.itemCount : 
                             this.state.itemsPerPage * this.state.currentPage
-                    } of {this.state.filteredProjects ? this.state.filteredProjects.length: this.state.itemCount}</div>
+                    } of {this.state.filteredProjects ? this.state.filteredProjects.length: this.state.itemCount}
+                    </div>
                 </div>
                 <Grid centered columns={3}>
                     <Grid.Row>
