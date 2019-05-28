@@ -1,96 +1,93 @@
-import placeholder from "../../placeholder.png";
+import {NavLink} from "react-router-dom";
+import { Image, Modal, Button, Icon, Header, Dropdown} from 'semantic-ui-react';
 import React, { Component } from 'react';
-import { Icon } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
 import "../Home/Home.css";
 
-class Home extends Component {
-    render() {
+class Home extends Component
+{
+    constructor(props)
+    {
+        super(props);
+    }
+
+    render()
+    {
         return (
-            <div className="content">
-                <div className="intro-section">
-                    <div className="section-header">
-                        Hi There, My name's Callum and I'm a Software Engineer
+            <React.Fragment>
+                <div className="top-section">
+                    <div className="central-section">
+                    <div>
+                        <h1>Hi there, My name’s Callum and I’m a Software Engineer</h1>
+                        <h2>I develop web applications and native desktop applications. I mainly work with C#, Python, and Java.
+                            <br/>I also have experience using web development frameworks such as React and Backbone.js.</h2>
+                        <div className="button-container">
+                            <div className="button">
+                                <NavLink exact to="/portfolio">Portfolio</NavLink>
+                            </div>
+                            <div className="button">
+                                <NavLink exact to="/cv">CV</NavLink>
+                            </div>
+                            <div className="button">
+                                <NavLink exact to="/contact">Contact</NavLink>
+                            </div>
+                        </div>
                     </div>
-                    <div className="section-content">
-                        I develop web applications &amp; native applications mainly using C# and Java.<br/>
-                        I also have experience with other languages such as C, Python, and web development frameworks like React and Backbone. 
-                        <br/><br/> You can have a look at some of my
-                        <Link to="portfolio"> projects </Link>
-                        to see some examples of my work and the technologies that I have used.
-                    </div>
-                    <div className="section-content">
-                        <Link to="portfolio"> 
-                            <div className="button">Portfolio</div>
-                        </Link>
-                        <Link to="cv">
-                            <div className="button">CV</div>
-                        </Link>
-                        <Link to="contact">
-                            <div className="button">Contact</div>
-                        </Link>
                     </div>
                 </div>
-                <div className="inverted-section">
-                    <p className="blogpost-header">Recent posts</p>
-                    <div className="blogpost-section">
-                        <div className="blogpost-item">
-                            <a href="#">
-                                <div className="blogpost-title">This is an example title just to make sure it works </div>
-                            </a>
-                            <div className="blogpost-image">
-                                <img src={placeholder}/>
-                            </div>
-                            <div className="blogpost-bottomBar">
-                                <div className="blogpost-creationDate">
-                                    <Icon name='calendar'/>01/02/1995
-                                </div>
-                                <div className="blogpost-navigate">
-                                    <a href="#">
-                                        View <Icon name='external'/>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="blogpost-item">
-                            <a href="#">
-                                <div className="blogpost-title">This is an example title just to make sure it works </div>
-                            </a>
-                            <div className="blogpost-image">
-                                <img src={placeholder}/>
-                            </div>
-                            <div className="blogpost-bottomBar">
-                                <div className="blogpost-creationDate">
-                                    <Icon name='calendar'/>01/02/1995
-                                </div>
-                                <div className="blogpost-navigate">
-                                    <a href="#">
-                                        View <Icon name='external'/>
-                                    </a>
+                <div className="bottom-section">
+                    <div className="recent-posts-section">
+                        <h3>Recent Posts</h3>
+                        <a href="https://medium.com/@callumrussellquigley" target="_blank">view all <Icon name="caret right"/></a>
+                    </div>
+                    <div className="post-container">
+                        <div className="post">
+                            <div className="post-image"><img src="https://via.placeholder.com/398x300"/></div>
+                            <div className="post-information">
+                                <div className="post-title">Some Title</div>
+                                <div className="post-content">Some Description</div>                        
+                                <div className="relative-container">
+                                    <div className="post-date">01/02/2019</div>
+                                    <div className="view-button-container">
+                                        <div className="relative-container">
+                                            <div className="view-button"><a href="#">View</a></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="blogpost-item">
-                            <a href="#">
-                                <div className="blogpost-title">This is an example title just to make sure it works </div>
-                            </a>
-                            <div className="blogpost-image">
-                                <img src={placeholder}/>
-                            </div>
-                            <div className="blogpost-bottomBar">
-                                <div className="blogpost-creationDate">
-                                    <Icon name='calendar'/>01/02/1995
+                        <div className="post">
+                            <div className="post-image"><img src="https://via.placeholder.com/398x300"/></div>
+                            <div className="post-information">
+                                <div className="post-title">Some Title</div>
+                                <div className="post-content">Some Description</div>                        
+                                <div className="relative-container">
+                                    <div className="post-date">01/02/2019</div>
+                                    <div className="view-button-container">
+                                        <div className="relative-container">
+                                            <div className="view-button"><a href="#">View</a></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="blogpost-navigate">
-                                    <a href="#">
-                                        View <Icon name='external'/>
-                                    </a>
+                            </div>
+                        </div>
+                        <div className="post">
+                            <div className="post-image"><img src="https://via.placeholder.com/398x300"/></div>
+                            <div className="post-information">
+                                <div className="post-title">Some Title</div>
+                                <div className="post-content">Some Description</div>                        
+                                <div className="relative-container">
+                                    <div className="post-date">01/02/2019</div>
+                                    <div className="view-button-container">
+                                        <div className="relative-container">
+                                            <div className="view-button"><a href="#">View</a></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </React.Fragment>
         )
     }
 }

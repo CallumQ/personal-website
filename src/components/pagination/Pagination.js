@@ -9,10 +9,11 @@ class PaginationComponent extends Component {
    
     render() {
         return (               
-            <div className="pagination-section">
+            <div className="example-container">
                 <Grid centered columns={1}>
                     <Grid.Column>
                         <Pagination
+                            className="bottom-pagination"
                             defaultActivePage={1}
                             firstItem={null}
                             lastItem={null}

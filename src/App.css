@@ -4,40 +4,54 @@
     opacity: 0.01;
     width: 100%;
     position: absolute;
-    transition: opacity 300ms ease-out;
 }
 
 .fade-exit {
     width: 100%;
     opacity: 0.01;
     position: absolute;
-    transition: opacity 300ms ease-out;
 }
 
 .fade-exit-active {
     opacity: 0.01;
-    transition: opacity 300ms ease-out;
 }
 
 .fade-enter.fade-enter-active {
     opacity: 1;
-    transition: opacity 300ms ease-in;
+    position: absolute;
 }
 
 .fade-leave {
     opacity: 1;
-    transition: opacity 300ms ease-in;
 }
 
 .fade-leave.fade-leave-active {
     opacity: 0.01;
-    transition: opacity 300ms ease-in;
 }
 
-.content-section {
-    height: 92.8vh;
+.app .content-section {
+    height: 93vh;
+    overflow: auto;
 }
 
- #body {
+body {
     overflow:hidden;
- }
+    height: 100%;
+}
+
+.app .content {
+    flex: 1 1 auto;
+    position: relative;
+}
+
+.app .content,
+.content-section > div {
+    height: 93vh;
+    overflow: auto;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}

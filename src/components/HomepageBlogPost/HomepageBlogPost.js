@@ -1,5 +1,5 @@
 import "../HomepageBlogPost/HomepageBlogPost.css";
-import placeholder from "../../800x450.jpg";
+import placeholder from "../../placeholder.png";
 import React, { Component } from 'react';
 import {Icon} from 'semantic-ui-react'
 
@@ -19,37 +19,21 @@ class HomepageBlogPost extends Component {
 
     render() {
         return (
-            <div className="blog-post-container">
-                <a href="#">
-                    <img src={placeholder} className="blog-post-image"/>
-                </a>
-                <div className={this.state.isActive ? "blog-post-bottom-bar active-post" : "blog-post-bottom-bar"}>
-                    <div className="blogpost-divider"></div>
-                    <div className="blog-post-bottom-text">
-                        <a href="#">
-                            <p>hello</p>
-                        </a>
-                    </div>
-                    <div className="blog-post-bottom-arrow" onClick={this.toggleBlogpost.bind(this)}>
-                        <Icon name='angle up'/>
-                    </div>
-                    <div className="blog-post-bottom-details">
-                        <Icon name='calendar alternate outline'/>
-                        <strong>Date:</strong> 12<sup>th</sup> July 2018 
-                        <br/>
-                        <div className="blog-post-bottom-content">
-                            Hello
-                            <div className="bottom-button-container">
-                                <div className="bottom-button-container-content">
-                                    <a href="#">
-                                        View
+            <div className="blogpost-item">
+                             <a href={this.props.url}>
+                                <div className="blogpost-title">{this.props.title} </div>
+                            </a>
+                            <div className="blogpost-image">
+                                <img src={this.props.image}/>
+                            </div>
+                            <div className="blogpost-bottomBar">
+                                <div className="blogpost-navigate">
+                                    <a href={this.props.url}>
+                                        View <Icon name='external'/>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
         )
     }
 }

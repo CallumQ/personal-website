@@ -1,7 +1,7 @@
 {
   "posts": [
     { "id": 1, "title": "project1", "description": "this is some example text \n wonderful", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300", "gitHubLink":"https://github.com/CallumQ"},
-    { "id": 2, "title": "project2", "description": "this is some example text", "technology":["REACT"],"imageUrl":"https://via.placeholder.com/398x300", "gitHubLink":"https://github.com/CallumQ"},
+    { "id": 2, "title": "project2", "description": "this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text this is some example text ", "technology":["REACT"],"imageUrl":"https://via.placeholder.com/398x300", "gitHubLink":"https://github.com/CallumQ"},
     { "id": 3, "title": "project3", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300", "gitHubLink":"https://github.com/CallumQ"},
     { "id": 4, "title": "project4", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300", "gitHubLink":"https://github.com/CallumQ"},
     { "id": 5, "title": "project5", "description": "this is some example text", "technology":["CSS","REACT"],"imageUrl":"https://via.placeholder.com/398x300", "gitHubLink":"https://github.com/CallumQ"},
@@ -24,5 +24,28 @@
   "comments": [
     { "id": 1, "body": "some comment", "postId": 1 }
   ],
-  "profile": { "name": "typicode" }
+  "profile": { "name": "typicode" },
+  "blogPosts" : {"data": [
+    {
+      "id": "b969ac62a46b",
+      "name": "About Medium",
+      "description": "What is this thing and how does it work?",
+      "url": "https://medium.com/about",
+      "imageUrl": "https://cdn-images-1.medium.com/fit/c/200/200/0*ae1jbP_od0W6EulE.jpeg"
+    },
+    {
+      "id": "b45573563f5a",
+      "name": "Developers",
+      "description": "Medium’s Developer resources",
+      "url": "https://medium.com/developers",
+      "imageUrl": "https://cdn-images-1.medium.com/fit/c/200/200/1*ccokMT4VXmDDO1EoQQHkzg@2x.png"
+    },
+    {
+      "id": "b45573563f5a",
+      "name": "Developers",
+      "description": "Medium’s Developer resources",
+      "url": "https://medium.com/developers",
+      "imageUrl": "https://cdn-images-1.medium.com/fit/c/200/200/1*ccokMT4VXmDDO1EoQQHkzg@2x.png"
+    }
+  ]}
 }

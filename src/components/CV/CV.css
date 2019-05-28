@@ -1,0 +1,153 @@
+.cv-section{
+    text-align: center;
+    padding: 48px 10%;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.inverted-section {
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.cv-section-title{
+    padding: 48px 0%;
+    display: flex;
+}
+
+.section-sub-header{
+    font-size: 1.5em;
+}
+
+.section-item-title-bar{
+    font-size: 1.25em;
+}
+
+.cv-section-content{
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0px 35% 0px 35%;
+    font-size: 1.3em;
+}
+
+.cv-button{
+    width: 25%;
+}
+
+.section-1{
+    width: 33.3333%;
+    display: inline-block;
+}
+
+.section-2{
+    width: 66.6666%;
+    display: inline-block;
+}
+
+.section-header, .skills-sub-header{
+    margin: 0;
+
+}
+
+.section-header {
+    font-size: 2em;
+    text-align: right;
+    margin-right: 5vw;
+}
+.section-item{
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: left;
+}
+
+.section-item-title{
+    font-size: 1.35em;
+    width: 80%;
+}
+
+.section-item-description ul {
+    padding-left: 16px;
+}
+
+.section-item-date{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.section-item-title-bar{
+    width: 80%;
+    position: relative;
+}
+
+div .section-item{
+    padding-bottom: 48px;
+}
+
+
+div .section-item:last-child{
+    padding-bottom: 0px;
+}
+
+.section-sub-header i {
+    font-size: 0.6em;
+    transform: translateY(-10px); 
+    cursor: pointer;
+}
+
+.left-align{
+    text-align: left;
+}
+
+.cv-top-section {
+    padding: 48px 0%;
+ 
+      display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cv-top-section .button{
+    width: 152px;
+    text-align: center;
+}
+
+@media (max-width: 890px) {
+    .cv-section-title
+    {
+        display: block;
+    }
+
+    .section-1
+    {
+        width: 100%;
+        text-align: center;
+    }
+
+    .section-1 ul {
+        display: inherit;
+        text-align: left;
+        width: 254px;
+    }
+    
+    .section-header
+    {
+        text-align: center;
+    }
+
+    .section-item-date
+    {
+        position: initial;
+    }
+
+    .section-2
+    {
+        width: 90%;
+    }
+
+    .section-item-title, .section-item-title-bar
+    {
+        width: 100%;
+    }
+
+    .section-header
+    {
+        margin-bottom: 14px;
+    }
+}

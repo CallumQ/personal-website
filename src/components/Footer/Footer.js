@@ -1,6 +1,6 @@
 import {Icon} from 'semantic-ui-react';
-import "../Footer/Footer.css";
 import React from 'react';
+import "../Footer/Footer.css";
 
 const Footer = () => (
     <footer className="footer">
@@ -10,4 +10,4 @@ const Footer = () => (
     </footer>
 );
 
-export default Footer
+export default Footer;

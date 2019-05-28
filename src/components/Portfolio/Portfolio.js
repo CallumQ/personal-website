@@ -1,20 +1,22 @@
-import { Grid, Image, Button, Icon, Modal, Header} from 'semantic-ui-react';
-import ProjectContainer from '../projectContainer/ProjectContainer';
-import TechnologyItem from "../technologyItem/TechnologyItem";
-import PaginationComponent from '../pagination/Pagination';
-import { Dropdown } from 'semantic-ui-react';
 import React, { Component } from 'react';
 import "../Portfolio/portfolio.css";
+import { Image, Modal, Button, Icon, Header, Dropdown} from 'semantic-ui-react';
+import TechnologyItem from "../technologyItem/TechnologyItem";
+import ProjectContainer from '../projectContainer/ProjectContainer';
+import PaginationComponent from '../pagination/Pagination';
 
-class Portfolio extends Component {
+const options = [{ key: 100, text: 'CSS', value: "CSS" },{ key: 200, text: 'REACT', value: "REACT" },{ key: 300, text: 'C#', value: "C#" },{ key: 400, text: 'C', value: "C" }];
 
-    constructor(props) {
+class Portfolio extends Component
+{
+    constructor(props)
+    {
         super(props);
 
         this.state = {
             itemsPerPage: 6,
             currentPage: 1,
-            items: [],
+            searchItems: [],
             filteredItems: [],
             searchByFields: [],
             open: false
@@ -26,32 +28,38 @@ class Portfolio extends Component {
         this.openModal = this.openModal.bind(this);
     }
 
-    componentDidMount() {
-        fetch("http://localhost:3001/posts")
-        .then((response) => {
-            return response.json();
-        })
-        .then((json) => {
-           this.setState({items:json, itemCount: json.length})
-        })
-        .then((json) => {
-           this.buildSearchResults();
-        });
-    }
-
-    closeConfigShow = (closeOnEscape, closeOnDimmerClick) => () => {
-        this.setState({ closeOnEscape, closeOnDimmerClick, open: true });
-    }
-
     close = () => this.setState({ open: false });
     
-    buildSearchResults() {
+    componentDidMount ()
+    {
+        this.setState({
+            items:this.props.items,
+            itemCount: this.props.items.length
+        }, this.buildSearchResults);
+    }
+
+    componentDidUpdate(prevProps)
+    {
+        //This is required to prevent infinite re-renders of the component
+        if(this.props.items !== prevProps.items)
+        {
+            this.setState({items:this.props.items, itemCount: this.props.items.length}, this.buildSearchResults);
+        }
+    }
+
+
+    buildSearchResults()
+    {
         //ensure that we have some search fields before looping through everything
-        if (this.state.searchByFields != null && this.state.searchByFields != undefined && this.state.searchByFields.length > 0){
+        if (this.state.searchByFields != null && this.state.searchByFields != undefined && this.state.searchByFields.length > 0)
+        {
             let filteredItems = [];
-            for(var i = 0; i < this.state.items.length; i++){
-                for(var j = 0; j < this.state.searchByFields.length; j++){
-                    if(this.state.items[i].technology.includes(this.state.searchByFields[j])){
+            for(var i = 0; i < this.state.items.length; i++)
+            {
+                for(var j = 0; j < this.state.searchByFields.length; j++)
+                {
+                    if(this.state.items[i].technology.includes(this.state.searchByFields[j]))
+                    {
                         filteredItems.push(this.state.items[i]);
                         break;
                     }
@@ -59,38 +67,40 @@ class Portfolio extends Component {
             }
             let totalPages = Math.ceil(this.state.filteredItems.length / this.state.itemsPerPage);
             this.setState({filteredItems:filteredItems, itemCount:filteredItems.length, totalPages: totalPages, currentPage: 1});
-           
         }
-        else{
+        else
+        {
             let totalPages = Math.ceil(this.state.items.length / this.state.itemsPerPage);
             this.setState({filteredItems:this.state.items, itemCount:this.state.items.length, totalPages: totalPages, currentPage: 1, openedProject: this.state.items[0]});
         }
     }
 
-    updatePageNo(event,data) {
+    updatePageNo(event,data)
+    {
         this.setState({currentPage: data.activePage});
     }
 
-    openModal(projectID) {
+    openModal(projectID)
+    {
         let items = this.state.items;
         
-        for(var i = 0; i < items.length; i++){
-            if (items[i].id == projectID){
+        for(var i = 0; i < items.length; i++) {
+            if (items[i].id == projectID) {
                 this.setState({openedProject:items[i]});
             }
         }
         this.setState({open: true});
     }
 
-    updateSearchfields(event,data) {
+    updateSearchfields(event,data)
+    {
         this.setState({searchByFields:data.value})
     }
 
-    render() {
-        const options = [{ key: 100, text: 'CSS', value: "CSS" },{ key: 200, text: 'REACT', value: "REACT" },{ key: 300, text: 'C#', value: "C#" },{ key: 400, text: 'C', value: "C" },]
-
-        return(
-            <div className="project-container">
+    render()
+    {
+        return (
+            <React.Fragment>
                 <Modal
                 open={this.state.open}
                 closeOnEscape={this.closeOnEscape}
@@ -98,7 +108,7 @@ class Portfolio extends Component {
                 onClose={this.close}
                 closeIcon>
                     <Modal.Header>{this.state.openedProject ? this.state.openedProject.title : ""}</Modal.Header>
-                    <Modal.Content image>
+                    <Modal.Content image scrolling>
                         <Image wrapped size='medium' src={this.state.openedProject ? this.state.openedProject.imageUrl : ""} />
                         <Modal.Description>
                             <Header>{this.state.openedProject ? this.state.openedProject.title : ""}</Header>
@@ -115,28 +125,34 @@ class Portfolio extends Component {
                         </a>
                     </Modal.Actions>
                 </Modal>
-                <div className="project-informationBar">
-                    <div className="search-section">
-                        <Dropdown placeholder='Languages' multiple selection scrollable options={options} value={this.state.searchByFields} onChange={this.updateSearchfields}/>
-                        <div className="searchButton" onClick={this.buildSearchResults}>Search <Icon name='search'/></div>
-                    </div>
-                    <div className="searchInformation"> showing {(this.state.itemsPerPage*this.state.currentPage- this.state.itemsPerPage)+1} - {this.state.itemsPerPage*this.state.currentPage > (this.state.filteredProjects ? 
-                        this.state.filteredProjects.length : this.state.itemCount) ?
+
+                <div className="bottom-section">
+                    <div className="portfolio-header">
+                        <div className="portfolio-header-left">
+                            <div className="portfolio-header-left-searchbox">
+                                <Dropdown placeholder='Skills' fluid multiple search selection options={options} value={this.state.searchByFields} onChange={this.updateSearchfields}/>
+                            </div>
+                            <div className="portfolio-header-left-searchbutton">
+                                <Button primary onClick={this.buildSearchResults}>Filter <Icon name="filter"/></Button>
+                            </div>
+                        </div>
+                        <div className="portfolio-header-right">showing {(this.state.itemsPerPage*this.state.currentPage- this.state.itemsPerPage)+1} - {this.state.itemsPerPage*this.state.currentPage > (this.state.filteredProjects ? 
+                            this.state.filteredProjects.length : this.state.itemCount) ?
                             this.state.filteredProjects ?
                                 this.state.filteredProjects.length : 
                                 this.state.itemCount : 
                             this.state.itemsPerPage * this.state.currentPage
-                    } of {this.state.filteredProjects ? this.state.filteredProjects.length: this.state.itemCount}
+                            } of {this.state.filteredProjects ? this.state.filteredProjects.length: this.state.itemCount} results
+                        </div>
+                    </div>
+                    <div className="post-container">
+                        <ProjectContainer projects={this.state.filteredItems.slice(this.state.itemsPerPage*this.state.currentPage - this.state.itemsPerPage,this.state.itemsPerPage*this.state.currentPage)} openModal={this.openModal.bind(this)}/>
                     </div>
                 </div>
-                <Grid centered columns={3}>
-                    <Grid.Row>
-                        <ProjectContainer projects={this.state.filteredItems.slice(this.state.itemsPerPage*this.state.currentPage - this.state.itemsPerPage,this.state.itemsPerPage*this.state.currentPage)} openModal={this.openModal.bind(this)}/>
-                    </Grid.Row>
-                    <PaginationComponent itemsPerPage={this.state.itemsPerPage} currentPage={this.state.currentPage} updatePageNo={this.updatePageNo.bind(this)} filteredItemsLength ={this.state.filteredProjects ? 
-                        this.state.filteredProjects.length : this.state.itemCount}/>
-                </Grid>
-            </div>
+             
+                <PaginationComponent itemsPerPage={this.state.itemsPerPage} currentPage={this.state.currentPage} updatePageNo={this.updatePageNo.bind(this)} filteredItemsLength ={this.state.filteredProjects ? 
+                    this.state.filteredProjects.length : this.state.itemCount}/>
+            </React.Fragment>
         );
     }
 };
